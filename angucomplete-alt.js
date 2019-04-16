@@ -164,6 +164,7 @@
 
       function callOrAssign(value) {
         if (typeof scope.selectedObject === 'function') {
+          // console.log('Should have called', value, scope.selectedObject)
           scope.selectedObject(value, scope.selectedObjectData);
         }
         else {
