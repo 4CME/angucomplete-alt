@@ -402,7 +402,7 @@
               inputField.val(scope.searchStr);
             });
           }
-        } else if (which === KEY_TAB) {
+        } else if (which === KEY_TAB || which === KEY_EN) {
           if (scope.results && scope.results.length > 0 && scope.showDropdown) {
             if (scope.currentIndex === -1 && scope.overrideSuggestions) {
               // intentionally not sending event so that it does not
