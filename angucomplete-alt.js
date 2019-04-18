@@ -358,6 +358,9 @@
         var rowTop = null;
 
         if (which === KEY_EN && scope.results) {
+          if (scope.currentIndex === -1 || scope.currentIndex === null || !scope.currentIndex) {
+            scope.currentIndex = 0;
+          }
           if (scope.currentIndex >= 0 && scope.currentIndex < scope.results.length) {
             event.preventDefault();
             scope.selectResult(scope.results[scope.currentIndex]);
@@ -402,7 +405,7 @@
               inputField.val(scope.searchStr);
             });
           }
-        } else if (which === KEY_TAB || which === KEY_EN) {
+        } else if (which === KEY_TAB) {
           if (scope.results && scope.results.length > 0 && scope.showDropdown) {
             if (scope.currentIndex === -1 && scope.overrideSuggestions) {
               // intentionally not sending event so that it does not
