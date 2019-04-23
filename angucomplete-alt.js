@@ -515,6 +515,7 @@
       }
 
       function clearResults() {
+        scope.currentIndex = -1;
         scope.showDropdown = false;
         scope.results = [];
         if (dd) {
